@@ -1,7 +1,29 @@
 src deco/
 
-src/minecraft/net/minecraft/src/FC*
-src/minecraft_server/net/minecraft/src/FC*
+src/minecraft/net/minecraft/server/
+src/minecraft_server/net/minecraft/server/
+
+src/minecraft/net/minecraft/src/Block.java
+src/minecraft/net/minecraft/src/EntityList.java
+src/minecraft/net/minecraft/src/FCItemSign.java
+src/minecraft/net/minecraft/src/FCItemStone.java
+src/minecraft/net/minecraft/src/FCItemButton.java
+src/minecraft/net/minecraft/src/Item.java
+src/minecraft/net/minecraft/src/NetClientHandler.java
+src/minecraft/net/minecraft/src/RenderGlobal.java
+src/minecraft/net/minecraft/src/ServerCommandManager.java
+src/minecraft/net/minecraft/src/ServerConfigurationManager.java
+
+src/minecraft_server/net/minecraft/src/Block.java
+src/minecraft_server/net/minecraft/src/EntityList.java
+src/minecraft_server/net/minecraft/src/FCItemSign.java
+src/minecraft_server/net/minecraft/src/FCItemStone.java
+src/minecraft_server/net/minecraft/src/FCItemButton.java
+src/minecraft_server/net/minecraft/src/Item.java
+src/minecraft_server/net/minecraft/src/NetClientHandler.java
+src/minecraft_server/net/minecraft/src/RenderGlobal.java
+src/minecraft_server/net/minecraft/src/ServerCommandManager.java
+src/minecraft_server/net/minecraft/src/ServerConfigurationManager.java
 
 src/minecraft/net/minecraft/src/BlockPane.java
 src/minecraft/net/minecraft/src/ContainerRepair.java
@@ -109,7 +131,6 @@ src/minecraft/net/minecraft/src/BlockBed.java
 src/minecraft/net/minecraft/src/BlockBookshelf.java
 src/minecraft/net/minecraft/src/BlockBreakable.java
 src/minecraft/net/minecraft/src/BlockBrewingStand.java
-src/minecraft/net/minecraft/src/BlockButton.java
 src/minecraft/net/minecraft/src/BlockButtonStone.java
 src/minecraft/net/minecraft/src/BlockButtonWood.java
 src/minecraft/net/minecraft/src/BlockCactus.java
@@ -2298,7 +2319,6 @@ src/minecraft_server/net/minecraft/src/BlockBed.java
 src/minecraft_server/net/minecraft/src/BlockBookshelf.java
 src/minecraft_server/net/minecraft/src/BlockBreakable.java
 src/minecraft_server/net/minecraft/src/BlockBrewingStand.java
-src/minecraft_server/net/minecraft/src/BlockButton.java
 src/minecraft_server/net/minecraft/src/BlockButtonStone.java
 src/minecraft_server/net/minecraft/src/BlockButtonWood.java
 src/minecraft_server/net/minecraft/src/BlockCactus.java
