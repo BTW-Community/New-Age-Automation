@@ -25,6 +25,7 @@ public class AutoPlusMod extends AddonExt {
 	@Override
 	public void Initialize() {
 		AutoPlusDefs.addDefinitions();
+		AutoPlusRecipes.addRecipes();
 	}
 
 	public String GetLanguageFilePrefix()

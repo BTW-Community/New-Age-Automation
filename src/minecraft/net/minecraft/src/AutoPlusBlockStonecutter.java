@@ -14,9 +14,6 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
     public static final float bladeWidth = 0.015625F;
     public static final float bladeHalfWidth = 0.0078125F;
     public static final float bladeHeight = 0.25F;
-    private Icon iconFront;
-    private Icon iconBladeOff;
-    private Icon iconBladeOn;
 
     protected AutoPlusBlockStonecutter(int var1)
     {
@@ -438,11 +435,11 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
 
             if (var8 != null)
             {
-                if (var8.DoesBlockBreakSaw(var1, var7.i, var7.j, var7.k))
+                if (var8.doesBlockBreakStonecutter(var1, var7.i, var7.j, var7.k))
                 {
                     this.BreakSaw(var1, var2, var3, var4);
                 }
-                else if (var8.OnBlockSawed(var1, var7.i, var7.j, var7.k, var2, var3, var4))
+                else if (var8.onBlockStonecut(var1, var7.i, var7.j, var7.k, var2, var3, var4))
                 {
                     this.EmitSawParticles(var1, var7.i, var7.j, var7.k, var5);
                 }
@@ -487,6 +484,12 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
     {
         this.BreakSaw(var1, var2, var3, var4);
     }
+    
+    //CLIENT ONLY
+    private Icon iconFront;
+    private Icon iconSide;
+    private Icon iconBladeOff;
+    private Icon iconBladeOn;
 
     /**
      * When this method is called, your block should register all the icons it needs with the given IconRegister. This
@@ -496,6 +499,7 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
     {
         super.registerIcons(var1);
         this.iconFront = var1.registerIcon("autoPlusBlockStonecutter_front");
+        this.iconSide = var1.registerIcon("autoPlusBlockStonecutter_side");
         this.iconBladeOff = var1.registerIcon("autoPlusBlockStonecutterBlade_off");
         this.iconBladeOn = var1.registerIcon("autoPlusBlockStonecutterBlade_on");
     }
@@ -505,7 +509,7 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
      */
     public Icon getIcon(int var1, int var2)
     {
-        return var1 == 1 ? this.iconFront : this.blockIcon;
+        return var1 == 1 ? this.iconFront : (var1 == 0 ? this.blockIcon : this.iconSide);
     }
 
     /**
@@ -514,7 +518,7 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
     public Icon getBlockTexture(IBlockAccess var1, int var2, int var3, int var4, int var5)
     {
         int var6 = this.GetFacing(var1, var2, var3, var4);
-        return var5 == var6 ? this.iconFront : this.blockIcon;
+        return var5 == var6 ? this.iconFront : (var5 == Facing.oppositeSide[var6] ? this.blockIcon : this.iconSide);
     }
 
     /**
@@ -539,13 +543,15 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
 
     public boolean RenderBlock(RenderBlocks var1, int var2, int var3, int var4)
     {
+    	var1.renderPistonBase(this, var2, var3, var4, true);
+    	
         IBlockAccess var5 = var1.blockAccess;
         float var6 = 0.5F;
         float var7 = 0.5F;
         float var8 = 0.75F;
         int var9 = this.GetFacing(var5, var2, var3, var4);
-        var1.setRenderBounds(this.GetBlockBoundsFromPoolBasedOnState(var1.blockAccess, var2, var3, var4));
-        var1.renderStandardBlock(this, var2, var3, var4);
+        //var1.setRenderBounds(this.GetBlockBoundsFromPoolBasedOnState(var1.blockAccess, var2, var3, var4));
+        //var1.renderStandardBlock(this, var2, var3, var4);
         var6 = 0.3125F;
         var7 = 0.0078125F;
         var8 = 0.25F;
