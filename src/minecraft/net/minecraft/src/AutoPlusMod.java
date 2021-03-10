@@ -11,7 +11,7 @@ public class AutoPlusMod extends AddonExt {
 	private static AutoPlusMod instance;
 	
 	public AutoPlusMod() {
-		super("Automation Plus", "1.0.0", "Auto+");
+		super("Automation Plus", "1.0.0", "AutoPlus");
 	}
 	
 	public static AutoPlusMod getInstance() {
@@ -24,6 +24,11 @@ public class AutoPlusMod extends AddonExt {
 
 	@Override
 	public void Initialize() {
+		AutoPlusDefs.addDefinitions();
+	}
 
+	public String GetLanguageFilePrefix()
+	{
+		return "AutoPlus";
 	}
 }
