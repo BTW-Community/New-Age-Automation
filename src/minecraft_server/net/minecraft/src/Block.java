@@ -2673,7 +2673,7 @@ public class Block
 
     public boolean doesBlockBreakStonecutter(World world, int x, int y, int z)
     {
-        return this.blockMaterial.isSolid() && this.blockMaterial != Material.rock && this.blockMaterial != Material.snow && this.blockMaterial != Material.craftedSnow && this.blockMaterial != FCBetterThanWolves.fcMaterialAsh;
+        return this.blockMaterial.isSolid() && this.blockMaterial != Material.rock && this.blockMaterial != Material.snow && this.blockMaterial != Material.craftedSnow && this.blockMaterial != FCBetterThanWolves.fcMaterialAsh && this.blockMaterial != FCBetterThanWolves.fcMaterialNetherRock;
     }
 
     public boolean onBlockStonecut(World world, int x, int y, int z, int stonecutterX, int stonecutterY, int stonecutterZ)

@@ -13,6 +13,7 @@ public class AutoPlusBlockArcaneVessel extends FCBlockArcaneVessel {
         if (!var1.isRemote && var5 instanceof EntityXPOrb)
         {
             super.onEntityCollidedWithBlock(var1, var2, var3, var4, (EntityXPOrb)var5);
+            //Updates comparator state
             var1.func_96440_m(var2, var3, var4, this.blockID);
         }
     }

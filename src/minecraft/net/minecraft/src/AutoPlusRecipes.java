@@ -46,6 +46,9 @@ public class AutoPlusRecipes {
 		Block.netherBrick.setItemCountDroppedOnStonecutter(2);
 		((FCBlockSidingAndCornerAndDecorative) FCBetterThanWolves.fcBlockNetherBrickSidingAndCorner).setMouldingIDDroppedOnStonecutter(FCBetterThanWolves.fcBlockNetherBrickMouldingAndDecorative.blockID);
 		((FCBlockMouldingAndDecorative) FCBetterThanWolves.fcBlockNetherBrickMouldingAndDecorative).setCornerIDDroppedOnStonecutter(FCBetterThanWolves.fcBlockNetherBrickSidingAndCorner.blockID);
+		Block.netherFence.setItemIDDroppedOnStonecutter(FCBetterThanWolves.fcBlockNetherBrickSidingAndCorner.blockID);
+		Block.netherFence.setItemCountDroppedOnStonecutter(2);
+		Block.netherFence.setItemDamageDroppedOnStonecutter(1);
 		
 		((FCBlockSidingAndCornerAndDecorative) FCBetterThanWolves.fcBlockWhiteStoneSidingAndCorner).setMouldingIDDroppedOnStonecutter(FCBetterThanWolves.fcBlockWhiteStoneMouldingAndDecorative.blockID);
 		((FCBlockMouldingAndDecorative) FCBetterThanWolves.fcBlockWhiteStoneMouldingAndDecorative).setCornerIDDroppedOnStonecutter(FCBetterThanWolves.fcBlockWhiteStoneSidingAndCorner.blockID);
