@@ -6,6 +6,18 @@ public class AutoPlusBlockArcaneVessel extends FCBlockArcaneVessel {
 	}
 
     /**
+     * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
+     */
+    public void onEntityCollidedWithBlock(World var1, int var2, int var3, int var4, Entity var5)
+    {
+        if (!var1.isRemote && var5 instanceof EntityXPOrb)
+        {
+            super.onEntityCollidedWithBlock(var1, var2, var3, var4, (EntityXPOrb)var5);
+            var1.func_96440_m(var2, var3, var4, this.blockID);
+        }
+    }
+
+    /**
      * If this returns true, then comparators facing away from this block will use the value from
      * getComparatorInputOverride instead of the actual redstone signal strength.
      */
