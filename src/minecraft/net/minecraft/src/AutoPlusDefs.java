@@ -30,5 +30,6 @@ public class AutoPlusDefs {
 			FCBetterThanWolves.fcBlockDispenser = (FCBlockBlockDispenser) Block.replaceBlock(FCBetterThanWolves.fcBlockDispenser.blockID, AutoPlusBlockBlockDispenser.class);
 		}
 		FCBetterThanWolves.fcHopper = Block.replaceBlock(FCBetterThanWolves.fcHopper.blockID, AutoPlusBlockHopper.class);
+		FCBetterThanWolves.fcBlockArcaneVessel = Block.replaceBlock(FCBetterThanWolves.fcBlockArcaneVessel.blockID, AutoPlusBlockArcaneVessel.class);
 	}
 }
