@@ -21,4 +21,12 @@ public class AutoPlusDecoIntegration {
 			e.printStackTrace();
 		}
 	}
+	
+	private static Object getDecoField(String fieldName) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
+		return decoDefs.getDeclaredField(fieldName).get(null);
+	}
+	
+	public static boolean isDecoInstalled() {
+		return isDecoInstalled;
+	}
 }

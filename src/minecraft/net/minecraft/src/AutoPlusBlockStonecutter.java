@@ -239,10 +239,8 @@ public class AutoPlusBlockStonecutter extends Block implements FCIBlockMechanica
     public boolean DropComponentItemsOnBadBreak(World var1, int var2, int var3, int var4, int var5, float var6)
     {
         this.DropItemsIndividualy(var1, var2, var3, var4, FCBetterThanWolves.fcItemGear.itemID, 1, 0, var6);
-        this.DropItemsIndividualy(var1, var2, var3, var4, Item.stick.itemID, 2, 0, var6);
-        this.DropItemsIndividualy(var1, var2, var3, var4, FCBetterThanWolves.fcItemSawDust.itemID, 3, 0, var6);
-        this.DropItemsIndividualy(var1, var2, var3, var4, Item.ingotIron.itemID, 2, 0, var6);
-        this.DropItemsIndividualy(var1, var2, var3, var4, FCBetterThanWolves.fcItemNuggetIron.itemID, 4, 0, var6);
+        this.DropItemsIndividualy(var1, var2, var3, var4, FCBetterThanWolves.fcItemStoneBrick.itemID, 2, 0, var6);
+        this.DropItemsIndividualy(var1, var2, var3, var4, FCBetterThanWolves.fcItemIngotDiamond.itemID, 2, 0, var6);
         this.DropItemsIndividualy(var1, var2, var3, var4, FCBetterThanWolves.fcItemStrap.itemID, 3, 0, var6);
         return true;
     }

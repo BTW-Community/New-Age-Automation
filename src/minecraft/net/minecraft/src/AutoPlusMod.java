@@ -10,8 +10,8 @@ package net.minecraft.src;
 public class AutoPlusMod extends AddonExt {
 	private static AutoPlusMod instance;
 	
-	public AutoPlusMod() {
-		super("Automation Plus", "1.0.0", "AutoPlus");
+	private AutoPlusMod() {
+		super("Automation+", "1.0.0", "AutoPlus");
 	}
 	
 	public static AutoPlusMod getInstance() {
@@ -24,8 +24,11 @@ public class AutoPlusMod extends AddonExt {
 
 	@Override
 	public void Initialize() {
+		FCAddOnHandler.LogMessage(this.getName() + " Version " + this.getVersionString() + " Initializing...");
+		AutoPlusDecoIntegration.init();
 		AutoPlusDefs.addDefinitions();
 		AutoPlusRecipes.addRecipes();
+		FCAddOnHandler.LogMessage(this.getName() + " Initialized");
 	}
 
 	public String GetLanguageFilePrefix()
