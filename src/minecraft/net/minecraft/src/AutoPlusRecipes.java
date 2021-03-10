@@ -9,6 +9,7 @@ public class AutoPlusRecipes {
 	private static void addAllRecipes() {
 		FCRecipes.AddStokedCauldronRecipe(new ItemStack(AutoPlusDefs.beltLubricated), new ItemStack[] {new ItemStack(FCBetterThanWolves.fcItemBelt), new ItemStack(FCBetterThanWolves.fcItemTallow)});
 		FCRecipes.AddRecipe(new ItemStack(AutoPlusDefs.stonecutter), new Object[] {"YYY", "XZX", "#X#", '#', FCBetterThanWolves.fcItemStoneBrick, 'X', FCBetterThanWolves.fcItemGear, 'Y', FCBetterThanWolves.fcItemIngotDiamond, 'Z', AutoPlusDefs.beltLubricated});
+        FCRecipes.AddRecipe(new ItemStack(Item.comparator, 1), new Object[] {" # ", "#X#", "III", '#', Block.torchRedstoneActive, 'X', FCBetterThanWolves.fcItemPolishedLapis, 'I', FCBetterThanWolves.fcItemStoneBrick});
 	}
 	
 	private static void addStonecutterRecipesToVanillaBlocks() {

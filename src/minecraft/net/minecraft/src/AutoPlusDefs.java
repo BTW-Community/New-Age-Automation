@@ -20,5 +20,15 @@ public class AutoPlusDefs {
 		if (!AutoPlusDecoIntegration.isDecoInstalled()) {
 			FCBetterThanWolves.fcAestheticOpaque = Block.replaceBlock(FCBetterThanWolves.fcAestheticOpaque.blockID, AutoPlusBlockAestheticOpaque.class);
 		}
+		
+		Block.redstoneComparatorIdle = (BlockComparator) Block.replaceBlock(Block.redstoneComparatorIdle.blockID, AutoPlusBlockComparator.class, false);
+		Block.redstoneComparatorActive = (BlockComparator) Block.replaceBlock(Block.redstoneComparatorActive.blockID, AutoPlusBlockComparator.class, true);
+		
+		Item.comparator = Item.replaceItem(Item.comparator.itemID, FCItemPlacesAsBlock.class, Block.redstoneComparatorIdle.blockID).setUnlocalizedName("comparator").setCreativeTab(CreativeTabs.tabRedstone);
+		
+		if (!AutoPlusDecoIntegration.isDecoInstalled()) {
+			FCBetterThanWolves.fcBlockDispenser = (FCBlockBlockDispenser) Block.replaceBlock(FCBetterThanWolves.fcBlockDispenser.blockID, AutoPlusBlockBlockDispenser.class);
+		}
+		FCBetterThanWolves.fcHopper = Block.replaceBlock(FCBetterThanWolves.fcHopper.blockID, AutoPlusBlockHopper.class);
 	}
 }

@@ -800,7 +800,6 @@ src/minecraft/net/minecraft/src/FCBlockCocoa.java
 src/minecraft/net/minecraft/src/FCBlockCompanionCube.java
 src/minecraft/net/minecraft/src/FCBlockComparator.java
 src/minecraft/net/minecraft/src/FCBlockCookedBrick.java
-src/minecraft/net/minecraft/src/FCBlockCookingVessel.java
 src/minecraft/net/minecraft/src/FCBlockCreeperOysters.java
 src/minecraft/net/minecraft/src/FCBlockCreeperOystersSlab.java
 src/minecraft/net/minecraft/src/FCBlockCrops.java
@@ -2909,7 +2908,6 @@ src/minecraft_server/net/minecraft/src/FCBlockCocoa.java
 src/minecraft_server/net/minecraft/src/FCBlockCompanionCube.java
 src/minecraft_server/net/minecraft/src/FCBlockComparator.java
 src/minecraft_server/net/minecraft/src/FCBlockCookedBrick.java
-src/minecraft_server/net/minecraft/src/FCBlockCookingVessel.java
 src/minecraft_server/net/minecraft/src/FCBlockCreeperOysters.java
 src/minecraft_server/net/minecraft/src/FCBlockCreeperOystersSlab.java
 src/minecraft_server/net/minecraft/src/FCBlockCrops.java
