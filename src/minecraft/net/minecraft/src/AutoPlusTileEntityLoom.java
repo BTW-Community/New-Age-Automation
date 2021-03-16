@@ -223,6 +223,28 @@ public class AutoPlusTileEntityLoom extends TileEntity implements IInventory {
 	@Override
 	public void closeChest() {}
 
+    public void attemptToAddItemsFromStack(ItemStack stack)
+    {
+        if (this.stackWeaving == null)
+        {
+            this.stackWeaving = stack.copy();
+            stack.stackSize = 0;
+            this.onInventoryChanged();
+        }
+        else if (this.stackWeaving.itemID == stack.itemID) {
+        	if (this.stackWeaving.stackSize + stack.stackSize <= stack.getItem().maxStackSize) {
+        		this.stackWeaving.stackSize += stack.stackSize;
+                stack.stackSize = 0;
+                this.onInventoryChanged();
+        	}
+        	else {
+        		stack.stackSize -= (stack.getItem().maxStackSize - this.stackWeaving.stackSize);
+        		this.stackWeaving.stackSize = stack.getItem().maxStackSize;
+                this.onInventoryChanged();
+        	}
+        }
+    }
+
 	@Override
 	public boolean isStackValidForSlot(int var1, ItemStack var2) {
 		// TODO Auto-generated method stub

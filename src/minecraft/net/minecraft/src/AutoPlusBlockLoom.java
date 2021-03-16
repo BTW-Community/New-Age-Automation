@@ -33,6 +33,39 @@ public class AutoPlusBlockLoom extends BlockContainer implements FCIBlockMechani
         int var7 = FCUtilsMisc.ConvertOrientationToFlatBlockFacing(var6);
         return this.SetFacing(var5, var7);
     }
+
+    /**
+     * Called upon block activation (right click on the block.)
+     */
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
+    {
+    	AutoPlusTileEntityLoom var11 = (AutoPlusTileEntityLoom)world.getBlockTileEntity(x, y, z);
+
+        if (this.isFull(world.getBlockMetadata(x, y, z)))
+        {
+            ItemStack stack = player.getCurrentEquippedItem();
+
+            if (stack != null)
+            {
+                if (!world.isRemote)
+                {
+                    world.playAuxSFX(2231, x, y, z, 0);
+                    var11.attemptToAddItemsFromStack(stack);
+                }
+                else
+                {
+                    --stack.stackSize;
+                }
+            }
+        }
+        else if (!world.isRemote)
+        {
+            world.playAuxSFX(2231, x, y, z, 0);
+            //var11.EjectContents(side);
+        }
+
+        return true;
+    }
     
     public boolean isFull(int meta) {
     	return (meta & 8) > 0;
