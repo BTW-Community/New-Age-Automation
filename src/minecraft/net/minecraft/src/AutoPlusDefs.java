@@ -2,18 +2,25 @@ package net.minecraft.src;
 
 public class AutoPlusDefs {
 	private static int
-		id_stonecutter = 2500;
+		id_stonecutter = 2500,
+		id_loom = 2501,
+		
+		_ = 0;
 
 	private static int
 		id_beltLubricated = 25000;
 	
 	public static Block stonecutter;
+	public static Block loom;
 	
 	public static Item beltLubricated;
 	
 	public static void addDefinitions() {
 		stonecutter = new AutoPlusBlockStonecutter(id_stonecutter);
 		Item.itemsList[stonecutter.blockID] = new ItemBlock(stonecutter.blockID - 256);
+		
+		loom = new AutoPlusBlockLoom(id_loom);
+		Item.itemsList[loom.blockID] = new ItemBlock(loom.blockID - 256);
 
 		beltLubricated = (new Item(id_beltLubricated)).SetBuoyant().SetIncineratedInCrucible().SetFilterableProperties(4).setUnlocalizedName("autoPlusItemBeltLubricated").setCreativeTab(CreativeTabs.tabMaterials);
 		

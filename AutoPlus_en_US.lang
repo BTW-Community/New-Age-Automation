@@ -1,5 +1,6 @@
 # Blocks
 tile.autoPlusBlockStonecutter.name=Stonecutter
+tile.autoPlusBlockLoom.name=Loom
 
 # Items
 item.autoPlusItemBeltLubricated.name=Lubricated Belt

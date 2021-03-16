@@ -1,6 +1,6 @@
 Version 1.0.0
 [list]
-[*]Added the stonecutter, which functions like the saw but for stone-based blocks. It is crafted like the saw but with diamond ingots, a lubricated belt, and stone brick items instead of planks. Note that they will break if used on anything not stone-based, which includes anyhing wooden.
+[*]Added the stonecutter, which functions like the saw but for stone-based blocks. It is crafted like the saw but with diamond ingots, a lubricated belt, and stone brick items instead of planks. Note that they will break if used on anything not stone-based, which includes anything wooden.
 [*]Added the lubricated belt, made with a belt and tallow in a stoked cauldron.
-[*]Re-enabled the comparator from vanilla. It can be crafted with the vanilla recipe shape, replacing the stone with stone brick items and the quartz with a redstone eye.
+[*]Re-enabled the comparator from vanilla. It is crafted with 3 stone bricks in a line below a redstone eye, which has 3 redstone torches around it (same shape as vanilla recipe).
 [/list]
