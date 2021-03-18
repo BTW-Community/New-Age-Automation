@@ -3,5 +3,9 @@ Version 1.0.0
 [*]Added the stonecutter, which functions like the saw but for stone-based blocks. It is crafted like the saw but with diamond ingots, a lubricated belt, and stone brick items instead of planks. Note that they will break if used on anything not stone-based, which includes anything wooden.
 [*]Added the lubricated belt, made with a belt and tallow in a stoked cauldron.
 [*]Added the ability to grind blaze rods into powder in a millstone.
-[*]Re-enabled the comparator from vanilla. It is crafted with 3 stone bricks in a line below a redstone eye, which has 3 redstone torches around it (same shape as vanilla recipe).
+[*]Added the vessel of the dragon to the creative menu.
+[*]Added (re-enabled) the comparator from vanilla. It is crafted with 3 stone bricks in a line below a redstone eye, which has 3 redstone torches around it (same shape as vanilla recipe).
+[*]Added the ability for the comparator to read from BTW inventories, which include the block dispenser, hopper, pulley, millstone, cauldron, and crucible.
+[*]Added the ability for the comparator to read the amount of xp present in the vessel of the dragon.
+[*]Fixed a BTW issue where glowing detector logic was in the crafting menu in place of the detector block.
 [/list]

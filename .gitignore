@@ -855,7 +855,6 @@ src/minecraft/net/minecraft/src/FCBlockGroundCover.java
 src/minecraft/net/minecraft/src/FCBlockHamper.java
 src/minecraft/net/minecraft/src/FCBlockHandCrank.java
 src/minecraft/net/minecraft/src/FCBlockHempCrop.java
-src/minecraft/net/minecraft/src/FCBlockHopper.java
 src/minecraft/net/minecraft/src/FCBlockIce.java
 src/minecraft/net/minecraft/src/FCBlockInfernalEnchanter.java
 src/minecraft/net/minecraft/src/FCBlockIronBars.java
@@ -2963,7 +2962,6 @@ src/minecraft_server/net/minecraft/src/FCBlockGroundCover.java
 src/minecraft_server/net/minecraft/src/FCBlockHamper.java
 src/minecraft_server/net/minecraft/src/FCBlockHandCrank.java
 src/minecraft_server/net/minecraft/src/FCBlockHempCrop.java
-src/minecraft_server/net/minecraft/src/FCBlockHopper.java
 src/minecraft_server/net/minecraft/src/FCBlockIce.java
 src/minecraft_server/net/minecraft/src/FCBlockInfernalEnchanter.java
 src/minecraft_server/net/minecraft/src/FCBlockIronBars.java

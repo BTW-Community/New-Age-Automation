@@ -28,6 +28,11 @@ public class AutoPlusDefs {
 		if (!AutoPlusDecoIntegration.isDecoInstalled()) {
 			FCBetterThanWolves.fcAestheticOpaque = Block.replaceBlock(FCBetterThanWolves.fcAestheticOpaque.blockID, AutoPlusBlockAestheticOpaque.class);
 		}
+
+        FCBetterThanWolves.fcItemWheat.SetFilterableProperties(8);
+		if (!AutoPlusDecoIntegration.isDecoInstalled()) {
+			FCBetterThanWolves.fcBlockWickerPane = (FCBlockWickerPane) Block.replaceBlock(FCBetterThanWolves.fcBlockWickerPane.blockID, AutoPlusBlockWickerPane.class);
+		}
 		
 		Block.redstoneComparatorIdle = (BlockComparator) Block.replaceBlock(Block.redstoneComparatorIdle.blockID, AutoPlusBlockComparator.class, false);
 		Block.redstoneComparatorActive = (BlockComparator) Block.replaceBlock(Block.redstoneComparatorActive.blockID, AutoPlusBlockComparator.class, true);
@@ -41,5 +46,9 @@ public class AutoPlusDefs {
 		FCBetterThanWolves.fcBlockArcaneVessel = Block.replaceBlock(FCBetterThanWolves.fcBlockArcaneVessel.blockID, AutoPlusBlockArcaneVessel.class);
 		FCBetterThanWolves.fcMillStone = Block.replaceBlock(FCBetterThanWolves.fcMillStone.blockID, AutoPlusBlockMillStone.class);
 		FCBetterThanWolves.fcPulley = Block.replaceBlock(FCBetterThanWolves.fcPulley.blockID, AutoPlusBlockPulley.class);
+		
+		FCBetterThanWolves.fcBlockDetectorGlowingLogic.setCreativeTab(null);
+		FCBetterThanWolves.fcBlockDetector.setCreativeTab(CreativeTabs.tabRedstone);
+		FCBetterThanWolves.fcBlockArcaneVessel.setCreativeTab(CreativeTabs.tabRedstone);
 	}
 }
