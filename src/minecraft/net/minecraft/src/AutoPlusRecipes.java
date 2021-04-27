@@ -12,6 +12,9 @@ public class AutoPlusRecipes {
 		FCRecipes.AddRecipe(new ItemStack(AutoPlusDefs.stonecutter), new Object[] {"YYY", "XZX", "#X#", '#', FCBetterThanWolves.fcItemStoneBrick, 'X', FCBetterThanWolves.fcItemGear, 'Y', FCBetterThanWolves.fcItemIngotDiamond, 'Z', AutoPlusDefs.beltLubricated});
         FCRecipes.AddRecipe(new ItemStack(Item.comparator, 1), new Object[] {" # ", "#X#", "III", '#', Block.torchRedstoneActive, 'X', FCBetterThanWolves.fcItemPolishedLapis, 'I', FCBetterThanWolves.fcItemStoneBrick});
         FCRecipes.AddRecipe(new ItemStack(AutoPlusDefs.loom), new Object[] {"fSf", "gBg", "pgp", 'f', FCBetterThanWolves.fcItemHempFibers, 'S', FCBetterThanWolves.fcBlockSlats, 'g', FCBetterThanWolves.fcItemGear, 'B', FCBetterThanWolves.fcItemBelt, 'p', new ItemStack(FCBetterThanWolves.fcBlockWoodSidingItemStubID, 1, 32767)});
+        
+        FCRecipes.RemoveAnvilRecipe(new ItemStack(FCBetterThanWolves.fcItemPolishedLapis, 2), new Object[] {"###", "###", "GGG", " R ", '#', new ItemStack(Item.dyePowder, 1, 4), 'G', Item.goldNugget, 'R', Item.redstone});
+        FCRecipes.AddRecipe(new ItemStack(FCBetterThanWolves.fcItemPolishedLapis, 2), new Object[] {"###", "GGG", " R ", '#', new ItemStack(Item.dyePowder, 1, 4), 'G', Item.goldNugget, 'R', Item.redstone});
 	}
 	
 	private static void addStonecutterRecipesToVanillaBlocks() {

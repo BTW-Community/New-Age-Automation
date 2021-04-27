@@ -1,7 +1,9 @@
 ## Todo ##
 Steam power
 -Steam pipes
--Pneumatic tubes
--Chute (multidirectional hopper)
+-Pneumatic tubes (item transport)
+-Steam engine (mechanical generator)
+
+Chute (multidirectional hopper)
 
 ## Issues ##

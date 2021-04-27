@@ -3,7 +3,7 @@ package net.minecraft.src;
 import java.util.Random;
 import org.lwjgl.opengl.GL11;
 
-public class FCBlockHopper extends BlockContainer implements FCIBlockMechanical
+public class AutoPlusBlockChute extends BlockContainer implements FCIBlockMechanical
 {
     protected static final int m_iTickRate = 10;
     protected static final float m_fSpoutHeight = 0.25F;
@@ -16,7 +16,7 @@ public class FCBlockHopper extends BlockContainer implements FCIBlockMechanical
     private Icon m_IconContents;
     private boolean m_bIsRenderingNozzle = false;
 
-    protected FCBlockHopper(int var1)
+    protected AutoPlusBlockChute(int var1)
     {
         super(var1, FCBetterThanWolves.fcMaterialPlanks);
         this.setHardness(2.0F);

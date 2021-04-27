@@ -2,10 +2,13 @@ Version 1.0.0
 [list]
 [*]Added the stonecutter, which functions like the saw but for stone-based blocks. It is crafted like the saw but with diamond ingots, a lubricated belt, and stone brick items instead of planks. Note that they will break if used on anything not stone-based, which includes anything wooden.
 [*]Added the lubricated belt, made with a belt and tallow in a stoked cauldron.
+[*]Added the loom as a non-functional block. Functionality will be added at a later date. It is crafted with 2 hemp fiber and slats in the top row, 4 wood sidings on the sides, with a belt and gear in the center.
 [*]Added the ability to grind blaze rods into powder in a millstone.
 [*]Added the vessel of the dragon to the creative menu.
 [*]Added (re-enabled) the comparator from vanilla. It is crafted with 3 stone bricks in a line below a redstone eye, which has 3 redstone torches around it (same shape as vanilla recipe).
 [*]Added the ability for the comparator to read from BTW inventories, which include the block dispenser, hopper, pulley, millstone, cauldron, and crucible.
 [*]Added the ability for the comparator to read the amount of xp present in the vessel of the dragon.
+[*]Added the ability to filter wheat into wheat seeds and straw with a hopper using a wicker filter.
+[*]Changed the redstone eye recipe to use only a single row of lapis and to be made in a normal crafting grid.
 [*]Fixed a BTW issue where glowing detector logic was in the crafting menu in place of the detector block.
 [/list]

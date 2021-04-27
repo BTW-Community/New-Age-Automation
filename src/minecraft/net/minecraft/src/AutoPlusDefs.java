@@ -21,7 +21,6 @@ public class AutoPlusDefs {
 		
 		loom = new AutoPlusBlockLoom(id_loom);
 		Item.itemsList[loom.blockID] = new ItemBlock(loom.blockID - 256);
-		TileEntity.addMapping(AutoPlusTileEntityLoom.class, "autoPlusLoom");
 
 		beltLubricated = (new Item(id_beltLubricated)).SetBuoyant().SetIncineratedInCrucible().SetFilterableProperties(4).setUnlocalizedName("autoPlusItemBeltLubricated").setCreativeTab(CreativeTabs.tabMaterials);
 		
@@ -42,7 +41,6 @@ public class AutoPlusDefs {
 		if (!AutoPlusDecoIntegration.isDecoInstalled()) {
 			FCBetterThanWolves.fcBlockDispenser = (FCBlockBlockDispenser) Block.replaceBlock(FCBetterThanWolves.fcBlockDispenser.blockID, AutoPlusBlockBlockDispenser.class);
 		}
-		FCBetterThanWolves.fcHopper = Block.replaceBlock(FCBetterThanWolves.fcHopper.blockID, AutoPlusBlockHopper.class);
 		FCBetterThanWolves.fcBlockArcaneVessel = Block.replaceBlock(FCBetterThanWolves.fcBlockArcaneVessel.blockID, AutoPlusBlockArcaneVessel.class);
 		FCBetterThanWolves.fcMillStone = Block.replaceBlock(FCBetterThanWolves.fcMillStone.blockID, AutoPlusBlockMillStone.class);
 		FCBetterThanWolves.fcPulley = Block.replaceBlock(FCBetterThanWolves.fcPulley.blockID, AutoPlusBlockPulley.class);
