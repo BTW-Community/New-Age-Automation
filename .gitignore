@@ -1,4 +1,5 @@
 src deco/
+modsrc/
 
 src/minecraft/net/minecraft/server/
 src/minecraft_server/net/minecraft/server/

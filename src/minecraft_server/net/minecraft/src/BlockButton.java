@@ -7,6 +7,10 @@ public abstract class BlockButton extends Block
 {
     /** Whether this button is sensible to arrows, used by wooden buttons. */
     private final boolean sensible;
+    
+    static {
+    	AutoPlusMod.getInstance();
+    }
 
     protected BlockButton(int par1, boolean par2)
     {

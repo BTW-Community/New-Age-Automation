@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Random;
 
@@ -12,6 +13,7 @@ public class Item
     
     // ADDON EXTENDED //
     public static final boolean[] itemReplaced = new boolean[32000];
+    private Class entityClass = EntityItem.class;
     // ADDON EXTENDED //
 
     /** A 32000 elements Item array. */
@@ -1013,6 +1015,8 @@ public class Item
     		throw new RuntimeException("Multiple addons attempting to replace item " + itemsList[id]);
     	}
     	else {
+    		m_bSuppressConflictWarnings = true;
+    		
     		Item newItem = null;
     		
     		Class[] parameterTypes = new Class[parameters.length + 1];
@@ -1030,6 +1034,12 @@ public class Item
     			else if (type == Boolean.class) {
     				type = Boolean.TYPE;
     			}
+    			else if (type == Float.class) {
+    				type = Float.TYPE;
+    			}
+    			else if (type == Double.class) {
+    				type = Double.TYPE;
+    			}
     			else if (Block.class.isAssignableFrom(type)) {
     				type = Block.class;
     			}
@@ -1041,11 +1051,17 @@ public class Item
     			parameterValues[i + 1] = parameters[i];
     		}
     		
-    		try {
-    			newItem = (Item) newClass.getConstructor(parameterTypes).newInstance(parameterValues);
-			} catch (Exception e) {
-				throw new RuntimeException("A problem has occured attempting to instantiate replacement for " + itemsList[id]);
-			}
+    			try {
+					newItem = (Item) newClass.getConstructor(parameterTypes).newInstance(parameterValues);
+				} catch (InstantiationException e) {
+					throw new RuntimeException("A problem has occured attempting to instantiate replacement for " + itemsList[id]);
+				} catch (IllegalArgumentException e) {
+					throw new RuntimeException("Incompatible types passed to specified constructor for " + itemsList[id]);
+				} catch (NoSuchMethodException e) {
+					throw new RuntimeException("No appropriate constructor found for " + itemsList[id] + ". Constructors must be public to be used in replacement.");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
     		
     		itemReplaced[id] = true;
     		Item original = itemsList[id];
@@ -1060,8 +1076,26 @@ public class Item
     		
     		itemsList[id] = newItem;
     		
+    		m_bSuppressConflictWarnings = false;
+    		
     		return newItem;
     	}
+    }
+    
+    public boolean hasCustomItemEntity() {
+    	return this.entityClass != EntityItem.class;
+    }
+    
+    public Class getCustomItemEntity() {
+    	return this.entityClass;
+    }
+    
+    public void setCustomItemEntity(Class entityClass) {
+    	this.entityClass = entityClass;
+    }
+    
+    public EntityItem createItemAsEntityInWorld(World world, double x, double y, double z, ItemStack stack) {
+    	return null;
     }
     // ADDON EXTENDED //
 

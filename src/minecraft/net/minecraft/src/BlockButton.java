@@ -5,12 +5,12 @@ import java.util.Random;
 
 public abstract class BlockButton extends Block
 {
-	static {
-		AutoPlusMod.getInstance();
-	}
-	
     /** Whether this button is sensible to arrows, used by wooden buttons. */
     private final boolean sensible;
+    
+    static {
+    	AutoPlusMod.getInstance();
+    }
 
     protected BlockButton(int par1, boolean par2)
     {
